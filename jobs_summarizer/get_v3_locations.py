@@ -39,7 +39,6 @@ def value_formatter(val: str):
 
 def add_locations(df_for_iter_, preference):
 	locations = ["Remote"] if "Remote" in preference.values else []
-	location_dict = get_location_dict()
 
 	for token, row in df_for_iter_.iterrows():
 		country, state, city, preference = row[['country', 'state', "city", 'preference_location__']].values
